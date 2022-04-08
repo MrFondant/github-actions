@@ -10,7 +10,3 @@ description: 'Run PHPUnit via GithubAction.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    ARGS: ${{ inputs.args }}
-    VERSION: ${{ inputs.version }}
-    PHP_EXTENSIONS: ${{ inputs.php_extensions }}
