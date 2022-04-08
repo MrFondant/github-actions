@@ -1,0 +1,16 @@
+# https://help.github.com/en/articles/metadata-syntax-for-github-actions
+
+name: 'Venditan-PHPUnit'
+author: 'Venditan'
+branding:
+  icon: 'check-circle'
+  color: 'green'
+description: 'Run PHPUnit via GithubAction.'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    ARGS: ${{ inputs.args }}
+    VERSION: ${{ inputs.version }}
+    PHP_EXTENSIONS: ${{ inputs.php_extensions }}
